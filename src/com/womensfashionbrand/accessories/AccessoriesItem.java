@@ -13,7 +13,16 @@ public class AccessoriesItem extends ApparelItem {
 
     @Override
     public void printDescription() {
-        System.out.println("This is an accessories item.");
+        System.out.println(this);
     }
 
+//    @Override
+//    public String toString() {
+//        return "Product{" +
+//                "id=" + id +
+//                ", description='" + description + '\'' +
+//                ", stock=" + stock +
+//                ", price=" + price +
+//                '}';
+//    }
 }
