@@ -1,8 +1,8 @@
 package com.womensfashionbrand.clothing;
 
-import com.womensfashionbrand.products.ApparelItem;
+import com.womensfashionbrand.products.Product;
 
-public class Dresses extends ApparelItem {
+public class Dresses extends Product {
     private String dressesType;
 
     public Dresses(String name, double price, String size, String color, String dressesType) {
