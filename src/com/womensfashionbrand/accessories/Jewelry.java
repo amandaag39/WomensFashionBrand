@@ -1,12 +1,13 @@
 package com.womensfashionbrand.accessories;
 
-import com.womensfashionbrand.products.Product;
+import com.womensfashionbrand.models.Product;
+import com.womensfashionbrand.models.Review;
 
 public class Jewelry extends Product {
     private String jewelryType;
 
-    public Jewelry (String name, double price, String size, String color, String jewelryType) {
-        super(name, price, size, color);
+    public Jewelry (String name, double price, String size, String color, double weight, String description, String jewelryType) {
+        super(name, price, size, color, weight, description);
         this.jewelryType = jewelryType;
     }
 
@@ -21,5 +22,10 @@ public class Jewelry extends Product {
     @Override
     public void printDescription() {
         System.out.println("This is a " + color + " " + size + "size " + jewelryType + ".");
+    }
+
+    @Override
+    public void removeReview(Review review) {
+
     }
 }

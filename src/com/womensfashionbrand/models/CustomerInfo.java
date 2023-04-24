@@ -1,4 +1,4 @@
-package com.womensfashionbrand;
+package com.womensfashionbrand.models;
 
 public class CustomerInfo {
     private String firstName;
