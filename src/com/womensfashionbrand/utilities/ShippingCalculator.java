@@ -1,5 +1,6 @@
 package com.womensfashionbrand.utilities;
 
+import com.womensfashionbrand.exceptions.NegativeWeightException;
 import com.womensfashionbrand.models.CartItem;
 
 import java.util.List;
@@ -9,7 +10,7 @@ public interface ShippingCalculator {
 
     void setDestinationAddress(String destinationAddress);
 
-    double getWeight(CartItem item);
+    double getWeight(CartItem item) throws NegativeWeightException;
 
     void setWeight(double weight);
 

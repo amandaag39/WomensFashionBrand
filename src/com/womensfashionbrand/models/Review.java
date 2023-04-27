@@ -2,6 +2,7 @@ package com.womensfashionbrand.models;
 
 import com.womensfashionbrand.utilities.Reviewable;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class Review implements Reviewable {
@@ -42,6 +43,16 @@ public class Review implements Reviewable {
     @Override
     public void addReview(Review review) {
         // add review logic here
+    }
+
+    public void addReviewToDatabase() {
+        try{
+            //Code to add review to database
+            throw new SQLException();
+        } catch (SQLException e) {
+            System.out.println("Database error occurred: " + e.getMessage());
+            //handle the exception here
+        }
     }
 
     @Override

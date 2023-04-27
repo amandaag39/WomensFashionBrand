@@ -1,6 +1,7 @@
 package com.womensfashionbrand.models;
 
 
+import com.womensfashionbrand.exceptions.NegativeWeightException;
 import com.womensfashionbrand.utilities.ShippingCalculator;
 
 import java.util.List;
@@ -22,9 +23,14 @@ public class ShippingCalculatorImpl implements ShippingCalculator {
     }
 
     @Override
-    public double getWeight(CartItem item) {
-        return item.getProduct().getWeight() * item.getQuantity();
+    public double getWeight(CartItem item) throws NegativeWeightException {
+        double weight = item.getProduct().getWeight() * item.getQuantity();
+        if (weight < 0) {
+            throw new NegativeWeightException("Weight of item " + item.getProduct().getName() + " is negative: " + weight);
+        }
+        return weight;
     }
+
     public void setWeight(double weight) {
         this.weight = weight;
     }
